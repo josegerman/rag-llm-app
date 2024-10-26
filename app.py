@@ -1,15 +1,13 @@
-__import__('pysqlite3')
-import sys
-sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
-
 import streamlit as st
 import os
 import dotenv
 import uuid
 
 # check if it's linux so it works on Streamlit Cloud
-#if os.name == 'posix':
-
+if os.name == 'posix':
+    __import__('pysqlite3')
+    import sys
+    sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
 
 from langchain_openai import ChatOpenAI, AzureChatOpenAI
 from langchain_anthropic import ChatAnthropic
@@ -44,7 +42,7 @@ st.set_page_config(
 
 
 # --- Header ---
-st.html("""<h2 style="text-align: center;"><i>LLM RAG APP</i></h2>""")
+st.html("""<h2 style="text-align: center;">📚🔍 <i> Do your LLM even RAG bro? </i> 🤖💬</h2>""")
 
 
 # --- Initial Setup ---
@@ -201,5 +199,6 @@ else:
 
 with st.sidebar:
     st.divider()
+    
 
     
