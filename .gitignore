@@ -217,3 +217,9 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
+# Chroma db
+db/
+
+# Test files
+test.py
