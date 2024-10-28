@@ -49,7 +49,7 @@ st.set_page_config(
 
 
 # --- Header ---
-st.html("""<h2 style="text-align: center;"><i>Multi LLM RAG Apll</i></h2>""")
+st.html("""<h2 style="text-align: center;"><i>Multi LLM RAG App</i></h2>""")
 
 
 # --- Initial Setup ---
